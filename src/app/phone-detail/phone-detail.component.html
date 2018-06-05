@@ -1,0 +1,10 @@
+<div *ngIf="phone">
+  <h2>{{phone.name | uppercase}}  Details</h2>
+  <div><span>price: </span>{{phone.price}}</div>
+  <div><span>name: </span>{{phone.name}}</div>
+  <div>
+      <label>
+          <input [(ngModel)]="phone.name" placeholder="name">
+      </label>
+  </div>
+  </div>
