@@ -10,15 +10,12 @@ import {PhoneService} from'../phone.service';
   styleUrls: ['./phones.component.css']
 })
 export class PhonesComponent implements OnInit {
-
+  phones: Phone[];
   constructor( private phoneService: PhoneService) { }
  
-  phones : Phone [];
-  selectedPhone: Phone;
 
-  onSelect(phone : Phone):void{
-    this.selectedPhone = phone;
-  }
+
+
   getPhones(): void{
     this.phoneService.getPhones()
     .subscribe( phones => this.phones = phones);

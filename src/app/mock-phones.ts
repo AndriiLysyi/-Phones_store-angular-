@@ -10,4 +10,4 @@ export const PHONES: Phone[] =[
     {price: 300, name: 'Apple iphone SE'},
     {price: 600, name: 'Apple iphone 8'}
 ];
-} 
+ 
