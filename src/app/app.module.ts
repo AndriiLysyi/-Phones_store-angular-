@@ -9,6 +9,7 @@ import { PhoneDetailComponent } from './phone-detail/phone-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { PhoneSearchComponent } from './phone-search/phone-search.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     DashboardComponent,
     PhonesComponent,
     PhoneDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    PhoneSearchComponent
     
   ],
   imports: [

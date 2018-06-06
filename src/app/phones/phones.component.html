@@ -1,10 +1,23 @@
-
-
 <h2>Phones in our shop!</h2>
+<div>
+    <label>Phone name:
+      <input #phoneName />
+    </label>
+    <br/>
+    <label>Phone price: 
+        <input #phonePrice />
+    </label>
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button (click)="add(phoneName.value, phonePrice.value); phoneName.value=''">
+      add
+    </button>
+</div>
+
 <ul class="phones">
   <li *ngFor="let phone of phones">
-    <a routerLink ="/detail/{{phone.price}}"> 
-      <span class="badge">{{phone.price}}</span> {{phone.name}}
-    </a>
+    <a routerLink ="/detail/{{phone.id}}"> 
+      <span class="badge" >{{phone.price}}</span><span >{{phone.id}}</span> <span>{{phone.name}}</span>
+    </a> <button class="delete"  title="delete phone"
+            (click)="delete(phone)">x</button>
   </li>
 </ul>

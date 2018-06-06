@@ -19,7 +19,7 @@ phones: Phone[]=[];
 
   getPhones():void{
     this.phoneService.getPhones()
-      .subscribe(phones => this.phones = phones.slice(1,5));
+      .subscribe(phones => this.phones = phones.slice(1,4));
   }
 
 }

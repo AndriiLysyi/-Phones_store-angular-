@@ -4,6 +4,7 @@ import { Location } from '@angular/common';
 
 import {Phone} from '../phone';
 import {PhoneService} from'../phone.service';
+
 @Component({
   selector: 'app-phone-detail',
   templateUrl: './phone-detail.component.html',
@@ -23,12 +24,18 @@ export class PhoneDetailComponent implements OnInit {
   }
 
   getPhone(): void{
-    const price = +this.route.snapshot.paramMap.get('price');
-    this.phoneService.getPhone(price)
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.phoneService.getPhone(id)
       .subscribe(phone => this.phone= phone);
   }
   goBack(): void {
     this.location.back();
   }
+  save(): void {
+    this.phoneService.updatePhone(this.phone)
+      .subscribe(() => this.goBack());
+  }
+
+  
 
 }

@@ -1,12 +1,17 @@
 <div *ngIf="phone">
   <h2>{{phone.name | uppercase}}  Details</h2>
-  <div><span>price: </span>{{phone.price}}</div>
-  <div><span>name: </span>{{phone.name}}</div>
+  <div><span>id: </span>{{phone.id}}</div>
+
   <div>
-      <label>
+      <label> name
           <input [(ngModel)]="phone.name" placeholder="name">
       </label>
+      <br/>
+      <label> price:
+            <input [(ngModel)]="phone.price" placeholder="phone">
+          </label>
   </div>
+  <button (click)="save()">save</button>
   <button (click)="goBack()">go back</button>
 </div>
  
